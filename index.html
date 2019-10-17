@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text|Modak&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text|Modak&display=swap" rel="stylesheet">
+    <title>MotivApp</title>
+</head>
+
+
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="frase"></h1>
+            </div>
+        </div>
+    </div>
+
+    <button onclick="faleatoria()">Mas</button>
+
+
+
+
+    <script>
+        var frases = [
+            ['No hay que ir para atrás ni para darse impulso (Lao Tsé)', '<img src= img/frase1.jpg>',
+                'Liu Jian Mao Cao'
+            ],
+            ['No hay caminos para la paz; la paz es el camino (Mahatma Gandhi)', '<img src= img/frase2.jpg>',
+                'Zhi Mang Xing'
+            ],
+            [' Haz el amor y no la guerra (John Lennon)', '<img src= img/frase3.jpg>', 'Verdana'],
+            [' Para trabajar basta estar convencido de una cosa: que trabajar es menos aburrido que divertirse (Charles Baudelaire)',
+                '<img src= img/frase4.jpg>', 'Italic'
+            ],
+            ['Lo peor que hacen los malos es obligarnos a dudar de los buenos (Jacinto Benavente)',
+                '<img src= img/frase5.jpg>', 'Arial'
+            ],
+            ['Las guerras seguirán mientras el color de la piel siga siendo más importante que el de los ojos (Bob Marley) ',
+                '<img src= img/frase6.jpg>', 'Sans-Serif'
+            ],
+            ['Aprende a vivir y sabrás morir bien (Confucio)', '<img src= img/frase7.jpg>', 'Modak'],
+            ['Cada día sabemos más y entendemos menos (Albert Einstein)', '<img src= img/frase8.jpg>',
+                'Big Shoulders Text'
+            ]
+        ];
+
+        var fondo = ['red', 'blue', 'yellow', 'brown', 'green'];
+
+
+        function aleatorio(maximo) {
+
+            var aleatorio = Math.floor(Math.random() * maximo);
+            return aleatorio;
+
+        }
+
+        function faleatoria() {
+            var datos = aleatorio(frases.length);
+            document.getElementById("frase").innerHTML = frases[datos][0] + frases[datos][1];
+            document.body.style.background = fondo[aleatorio(fondo.length)];
+            document.getElementById("frase").style.fontFamily = frases[datos][2];
+        }
+
+
+        faleatoria();
+    </script>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Zhi+Mang+Xing&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Modak&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Text|Modak&display=swap');
+
+img {
+    width: 70%;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    margin: auto;
+}
+
+button {
+    position: fixed;
+    top: 0;
+}
